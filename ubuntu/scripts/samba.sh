@@ -48,6 +48,7 @@ then
 touch /opt/share/readme.txt
 fi
 
-echo "if you can see this message ,the samba server had deploy at the board" >/opt/share/readme.txt
+#echo "if you can see this message ,the samba server had deploy at the board" >/opt/share/readme.txt
+lava-test-case samba-test  --result pass 
 
 

@@ -17,5 +17,3 @@ run:
     steps:
         - "sudo ./ubuntu/scripts/samba.sh"
 
-parse:
-    pattern: "^(?P<test_case_id>\\w+)"
