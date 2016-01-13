@@ -41,6 +41,9 @@ echo smb
 } | smbpasswd -a smb 1>/dev/null 2>&1
 
 sudo /etc/init.d/smbd restart
+if [ $? -ne 0 ]; then
+    lava-test-case samba-test --result fail
+fi
 
 #Create a text file in share folder to explain samba server had been deploy
 if [ ! -f /opt/share/readme.txt ]
@@ -49,6 +52,6 @@ touch /opt/share/readme.txt
 fi
 
 #echo "if you can see this message ,the samba server had deploy at the board" >/opt/share/readme.txt
-lava-test-case samba-test  --result pass 
+lava-test-case samba-test  --result pass
 
 

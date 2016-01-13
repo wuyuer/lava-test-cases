@@ -12,8 +12,14 @@ metadata:
         - d02
         - d01
         - hikey
+    environment:
+        - lava-test-shell
+
+install:
+    deps:
+        - samba
 
 run:
     steps:
-        - "sudo ./ubuntu/scripts/samba.sh"
+        - "./ubuntu/scripts/samba.sh"
 
