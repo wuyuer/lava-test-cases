@@ -20,6 +20,8 @@ metadata:
 install:
     deps:
         - sysbench
+    steps:
+        - 'sudo apt-get install sysbench'
 
 params:
     TIMES: 8                # The number of times 'sysbench' will be run

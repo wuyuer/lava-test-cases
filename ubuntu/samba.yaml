@@ -1,0 +1,21 @@
+metadata:
+    name: samba
+    format: "Lava-Test-Shell Test Definition 1.0"
+    description: "Run tests from sambe suite on Ubuntu"
+    maintainer:
+        - wu.wu@hisilicon.com
+    os:
+        - ubuntu
+    scope:
+        - functional
+    devices:
+        - d02
+        - d01
+        - hikey
+
+run:
+    steps:
+        - "sudo ./ubuntu/scripts/samba.sh"
+
+parse:
+    pattern: "^(?P<test_case_id>\\w+)"
