@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 #    Authot : xiayanhui
 #    E-mail : xiayanhui@aliyun.com
